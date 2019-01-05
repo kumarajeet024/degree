@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Degree</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
 </head>
 
@@ -14,7 +14,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    What's the weather like?
+                    What's the weather in your city ?
                 </h1>
             </div>
         </div>
@@ -30,7 +30,7 @@
                             </div>
                             <div class="control">
                                 <button class="button is-info">
-                                    Add City
+                                    Search City
                                 </button>
                             </div>
                         </div>
@@ -47,16 +47,17 @@
                         <article class="media">
                             <div class="media-left">
                                 <figure class="image is-50x50">
-                                    <img src="http://openweathermap.org/img/w/10d.png" alt="Image">
+                                    <img src="http://openweathermap.org/img/w/{{city_weather.icon}}.png" alt="Image">
                                 </figure>
                             </div>
                             <div class="media-content">
                                 <div class="content">
                                     <p>
-                                        <span class="title">Las Vegas</span>
+                                        <span class="title">{{city_weather.city}}</span>
                                         <br>
-                                        <span class="subtitle">29° F</span>
-                                        <br> thunderstorm with heavy rain
+                                        <span class="subtitle">{{city_weather.temprature}}</span>
+                                        <br> {{city_weather.description}}
+                                        <h5>Wind speed:{{city_weather.wind}}</h5>
                                     </p>
                                 </div>
                             </div>
@@ -67,6 +68,7 @@
         </div>
     </section>
     <footer class="footer">
+        
     </footer>
 </body>
 
